@@ -209,36 +209,52 @@ async function loadDashboard() {
                 <h3>Team Leaders</h3>
                 <div class="leaders-grid">
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(scoringLeader.Player)}'">
-                        <img class="leader-photo" src="images/players/${scoringPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
-                        <p>
-                            Scoring Leader:
+                        <img class="dashboard-player-photo" src="images/players/${scoringPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <div class="leader-title">
+                            Scoring Leader
+                        </div>
+                        <div class="leader-name">
                             ${cleanName(scoringLeader.Player)}
-                            (${scoringLeader.PPG.toFixed(1)})
-                        </p>
+                        </div>
+                        <div class="leader-stat">
+                            ${scoringLeader.PPG.toFixed(1)} PPG
+                        </div>
                     </div>
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(reboundLeader.Player)}'">
-                        <img class="leader-photo" src="images/players/${reboundPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
-                        <p>
-                            Rebounding Leader:
+                        <img class="dashboard-player-photo" src="images/players/${reboundPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <div class="leader-title">
+                            Rebounding Leader
+                        </div>
+                        <div class="leader-name">
                             ${cleanName(reboundLeader.Player)}
-                            (${reboundLeader.RPG.toFixed(1)})
-                        </p>
+                        </div>
+                        <div class="leader-stat">
+                            ${reboundLeader.RPG.toFixed(1)} RPG
+                        </div>
                     </div>
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(assistLeader.Player)}'">
-                        <img class="leader-photo" src="images/players/${assistPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
-                        <p>
-                            Assists Leader:
+                        <img class="dashboard-player-photo" src="images/players/${assistPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <div class="leader-title">
+                            Assists Leader
+                        </div>
+                        <div class="leader-name">
                             ${cleanName(assistLeader.Player)}
-                            (${assistLeader.APG.toFixed(1)})
-                        </p>
+                        </div>
+                        <div class="leader-stat">
+                            ${assistLeader.APG.toFixed(10)} APG
+                        </div>
                     </div>
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(stealLeader.Player)}'">
-                        <img class="leader-photo" src="images/players/${stealPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
-                        <p>
-                            Steals Leader:
+                        <img class="dashboard-player-photo" src="images/players/${stealPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <div class="leader-title">
+                            Steals Leader
+                        </div>
+                        <div class="leader-name">
                             ${cleanName(stealLeader.Player)}
-                            (${stealLeader.SPG.toFixed(1)})
-                        </p>
+                        </div>
+                        <div class="leader-stat">
+                            ${stealLeader.SPG.toFixed(10)} SPG
+                        </div>
                     </div>
                 </div>
             </div>
