@@ -70,6 +70,14 @@
     </div>
 
 <script>
+if (
+    sessionStorage.getItem(
+        "authenticated"
+    ) === "true"
+) {
+    window.location.href =
+        "portal.html";
+}
 
 function checkPassword() {
 
@@ -79,6 +87,10 @@ function checkPassword() {
         ).value;
 
     if (password === "Dynasty2026") {
+        sessionStorage.setItem(
+                "authenticated",
+                "true"
+        );
 
         window.location.href =
             "portal.html";
