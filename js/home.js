@@ -241,7 +241,7 @@ async function loadDashboard() {
                             ${cleanName(assistLeader.Player)}
                         </div>
                         <div class="leader-stat">
-                            ${assistLeader.APG.toFixed(10)} APG
+                            ${assistLeader.APG.toFixed(2)} APG
                         </div>
                     </div>
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(stealLeader.Player)}'">
@@ -253,7 +253,7 @@ async function loadDashboard() {
                             ${cleanName(stealLeader.Player)}
                         </div>
                         <div class="leader-stat">
-                            ${stealLeader.SPG.toFixed(10)} SPG
+                            ${stealLeader.SPG.toFixed(2)} SPG
                         </div>
                     </div>
                 </div>
