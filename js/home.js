@@ -209,7 +209,7 @@ async function loadDashboard() {
                 <h3>Team Leaders</h3>
                 <div class="leaders-grid">
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(scoringLeader.Player)}'">
-                        <img class=""leader-photo" src="images/players/${scoringPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <img class="leader-photo" src="images/players/${scoringPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
                         <p>
                             Scoring Leader:
                             ${cleanName(scoringLeader.Player)}
@@ -217,7 +217,7 @@ async function loadDashboard() {
                         </p>
                     </div>
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(reboundLeader.Player)}'">
-                        <img class=""leader-photo" src="images/players/${reboundPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <img class="leader-photo" src="images/players/${reboundPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
                         <p>
                             Rebounding Leader:
                             ${cleanName(reboundLeader.Player)}
@@ -225,7 +225,7 @@ async function loadDashboard() {
                         </p>
                     </div>
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(assistLeader.Player)}'">
-                        <img class=""leader-photo" src="images/players/${assistPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <img class="leader-photo" src="images/players/${assistPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
                         <p>
                             Assists Leader:
                             ${cleanName(assistLeader.Player)}
@@ -233,7 +233,7 @@ async function loadDashboard() {
                         </p>
                     </div>
                     <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(stealLeader.Player)}'">
-                        <img class=""leader-photo" src="images/players/${stealPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <img class="leader-photo" src="images/players/${stealPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
                         <p>
                             Steals Leader:
                             ${cleanName(stealLeader.Player)}
