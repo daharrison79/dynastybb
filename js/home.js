@@ -59,6 +59,26 @@ async function loadDashboard() {
             b.PLUS_MINUS - a.PLUS_MINUS
     );
 
+    const scoringLeader =
+        [...players].sort(
+            (a, b) => b.PPG - a.PPG
+        )[0];
+
+    const reboundLeader =
+        [...players].sort(
+            (a, b) => b.RPG - a.RPG
+        )[0];
+
+    const assistLeader =
+        [...players].sort(
+            (a, b) => b.APG - a.APG
+        )[0];
+
+    const stealLeader =
+        [...players].sort(
+            (a, b) => b.SPG - a.SPG
+        )[0];
+
     const topPlayer = players[0];
     console.log(topPlayer.Player);
 
@@ -171,6 +191,30 @@ async function loadDashboard() {
                 <div class="lineup-players">
                     ${lineupHtml}
                 </div>
+            </div>
+
+            <div class="dashboard-card">
+            <h3>Team Leaders</h3>
+            <p>
+                PTS:
+                ${cleanName(scoringLeader.Player)}
+                (${scoringLeader.PPG.toFixed(1)})
+            </p>
+            <p>
+                REB:
+                ${cleanName(reboundLeader.Player)}
+                (${reboundLeader.RPG.toFixed(1)})
+            </p>
+            <p>
+                AST:
+                ${cleanName(assistLeader.Player)}
+                (${assistLeader.APG.toFixed(1)})
+            </p>
+            <p>
+                STL:
+                ${cleanName(stealLeader.Player)}
+                (${stealLeader.SPG.toFixed(1)})
+            </p>
             </div>
         </div>
     `;
