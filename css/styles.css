@@ -347,7 +347,6 @@ body::before {
 .leader-item {
     cursor: pointer;
     text-align: center;
-    width: 120px;
     transition: 0.2s ease;
 }
 
@@ -356,12 +355,13 @@ body::before {
 }
 
 .leader-photo {
-    width: 90px;
-    height: 120px;
+    width: 80px;
+    height: 110px;
     object-fit: cover;
     border-radius: 8px;
     border: 2px solid var(--dynasty-cyan);
-    margin-bottom: 8px;
+    margin-bottom: 0 auto 8px;
+    display: block;
 }
 
 
