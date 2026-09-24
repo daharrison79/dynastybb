@@ -64,20 +64,32 @@ async function loadDashboard() {
             (a, b) => b.PPG - a.PPG
         )[0];
 
+    const scoringPhoto =
+        photoName(scoringLeader.Player);
+
     const reboundLeader =
         [...players].sort(
             (a, b) => b.RPG - a.RPG
         )[0];
+    
+    const reboundPhoto =
+        photoName(reboundLeader.Player);
 
     const assistLeader =
         [...players].sort(
             (a, b) => b.APG - a.APG
         )[0];
 
+    const assistPhoto =
+        photoName(assistLeader.Player);
+
     const stealLeader =
         [...players].sort(
             (a, b) => b.SPG - a.SPG
         )[0];
+
+    const stealPhoto = 
+        photoName(stealLeader.Player);
 
     const topPlayer = players[0];
     console.log(topPlayer.Player);
@@ -193,28 +205,42 @@ async function loadDashboard() {
                 </div>
             </div>
 
-            <div class="dashboard-card">
-            <h3>Team Leaders</h3>
-            <p>
-                PTS:
-                ${cleanName(scoringLeader.Player)}
-                (${scoringLeader.PPG.toFixed(1)})
-            </p>
-            <p>
-                REB:
-                ${cleanName(reboundLeader.Player)}
-                (${reboundLeader.RPG.toFixed(1)})
-            </p>
-            <p>
-                AST:
-                ${cleanName(assistLeader.Player)}
-                (${assistLeader.APG.toFixed(1)})
-            </p>
-            <p>
-                STL:
-                ${cleanName(stealLeader.Player)}
-                (${stealLeader.SPG.toFixed(1)})
-            </p>
+            <div class="dashboard-card leaders-card">
+                <h3>Team Leaders</h3>
+                <div class="leaders-grid">
+                    <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(scoringLeader.Player)}'">
+                        <img class=""leader-photo" src="images/players/${scoringPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <p>
+                            Scoring Leader:
+                            ${cleanName(scoringLeader.Player)}
+                            (${scoringLeader.PPG.toFixed(1)})
+                        </p>
+                    </div>
+                    <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(reboundLeader.Player)}'">
+                        <img class=""leader-photo" src="images/players/${reboundPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <p>
+                            Rebounding Leader:
+                            ${cleanName(reboundLeader.Player)}
+                            (${reboundLeader.RPG.toFixed(1)})
+                        </p>
+                    </div>
+                    <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(assistLeader.Player)}'">
+                        <img class=""leader-photo" src="images/players/${assistPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <p>
+                            Assists Leader:
+                            ${cleanName(assistLeader.Player)}
+                            (${assistLeader.APG.toFixed(1)})
+                        </p>
+                    </div>
+                    <div class="leader-item" onclick="window.location.href='player.html?player=${encodeURIComponent(stealLeader.Player)}'">
+                        <img class=""leader-photo" src="images/players/${stealPhoto}.png" alt="Player Photo" onerror="this.src='images/players/playerplaceholder.png'">
+                        <p>
+                            Steals Leader:
+                            ${cleanName(stealLeader.Player)}
+                            (${stealLeader.SPG.toFixed(1)})
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     `;
