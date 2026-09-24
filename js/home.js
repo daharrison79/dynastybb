@@ -121,7 +121,7 @@ async function loadDashboard() {
         </div>
         <div class="dashboard-grid">
 
-            <div class="dashboard-card top-player-card">
+            <div class="dashboard-card top-player-card" onclick="window.location.href='player.html?player=${encodeURIComponent(topPlayer.Player)}'">
                 <h3>Top Impact Player</h3>
                 <br>
                 ${topPlayer.PLUS_MINUS > 0 ? "+" : ""}${topPlayer.PLUS_MINUS}
@@ -137,7 +137,7 @@ async function loadDashboard() {
                 </div>
             </div>
 
-            <div class="dashboard-card pairing-card">
+            <div class="dashboard-card pairing-card"onclick="window.location.href='pairings.html'">
                 <h3>Best Pairing</h3>
                 <br>
                 ${topPairing.DIFF > 0 ? "+" : ""}${topPairing.DIFF}
@@ -164,7 +164,7 @@ async function loadDashboard() {
                     </div>
                 </div>
             </div>
-            <div class="dashboard-card lineup-card">
+            <div class="dashboard-card lineup-card" onclick="window.location.href='lineups.html'">
                 <h3>Best Lineup</h3>
                 <br>
                 ${topLineup.DIFF > 0 ? "+" : ""}${topLineup.DIFF}
