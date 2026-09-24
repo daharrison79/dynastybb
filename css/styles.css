@@ -327,6 +327,32 @@ body::before {
         justify-content: center;
 }
 
+.leaders-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.leader-item {
+    cursor: pointer;
+    text-align: center;
+    width: 120px;
+    transition: 0.2s ease;
+}
+
+.leader-item:hover {
+    transform: translateY(-4px);
+}
+
+.leader-photo {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--dynasty-cyan);
+    margin-bottom: 8px;
+}
 
 
 .team-stat-grid {
