@@ -16,71 +16,6 @@
 }
 
 
-/*MOBILE*/
-@media (max-width: 768px) {
-    .site-logo {
-        max-width: 350px;
-    }
-    .season-subtitle {
-        font-size: 1rem;
-    }
-    #data-selectors {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    main::before,
-    body::before {
-        display: none;
-    }
-    .dashboard-card {
-        min-width: 0;
-        width: 100%;
-    }
-    
-
-    .leaders-grid .dashboard-player-photo {
-        width: 90px;
-        height: 120px;
-    }
-    .leaders-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        width: 100%;
-        gap: 15px;
-    }
-    .leader-title,
-    .leader-name,
-    .leader-stat {
-        font-size: 0.8rem;
-    }
-    .leader-item {
-        min-width: 0;
-    }
-    .team-stat-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-        width: 100%;
-    }
-    .leaders-card {
-        width: 100%;
-        min-width: 0;
-    }
-    .team-stat-card {
-        min-width: 0;
-        overflow: hidden;
-    }
-    .team-stat-label {
-        font-size: 0.75rem;
-    }
-    .team-stat-value {
-        font-size: 1.2rem;
-    }
-    .profile-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
 
 
 /*HEADER*/
@@ -651,4 +586,71 @@ button:hover {
 .pairing-card {
     width: 340px;
     text-align: center;
+}
+
+
+/*MOBILE*/
+@media (max-width: 768px) {
+    .site-logo {
+        max-width: 350px;
+    }
+    .season-subtitle {
+        font-size: 1rem;
+    }
+    #data-selectors {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    main::before,
+    body::before {
+        display: none;
+    }
+    .dashboard-card {
+        min-width: 0;
+        width: 100%;
+    }
+    
+
+    .leaders-grid .dashboard-player-photo {
+        width: 90px;
+        height: 120px;
+    }
+    .leaders-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 15px;
+    }
+    .leader-title,
+    .leader-name,
+    .leader-stat {
+        font-size: 0.8rem;
+    }
+    .leader-item {
+        min-width: 0;
+    }
+    .team-stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
+    }
+    .leaders-card {
+        width: 100%;
+        min-width: 0;
+    }
+    .team-stat-card {
+        min-width: 0;
+        overflow: hidden;
+    }
+    .team-stat-label {
+        font-size: 0.75rem;
+    }
+    .team-stat-value {
+        font-size: 1.2rem;
+    }
+    .profile-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
