@@ -348,20 +348,29 @@ body::before {
     cursor: pointer;
     text-align: center;
     transition: 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leader-title {
+    color: var(--dynasty-pink);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.leader-name {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.leader-stat {
+    color: var(--dynasty-cyan);
+    font-weight: 700;
 }
 
 .leader-item:hover {
     transform: translateY(-4px);
-}
-
-.leader-photo {
-    width: 80px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid var(--dynasty-cyan);
-    margin-bottom: 0 auto 8px;
-    display: block;
 }
 
 
