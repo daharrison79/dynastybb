@@ -56,11 +56,11 @@ async function loadDashboard() {
 
     players.forEach(player=>{
         player.IMPACT_SCORE =
-            (player.PTS || 0 +
-            (player.REV || 0 +
-            (player.AST || 0 +
-            (player.STL || 0 +
-            (player.BLK || 0 +
+            (player.PTS || 0) +
+            (player.REB || 0) +
+            (player.AST || 0) +
+            ((player.STL || 0)*2) +
+            ((player.BLK || 0)*2) +
             (player.TO || 0 );
     });
 
