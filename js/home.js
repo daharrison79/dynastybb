@@ -103,7 +103,6 @@ async function loadDashboard() {
     const stealPhoto = 
         photoName(stealLeader.Player);
 
-    const topPlayer = players[0];
     console.log(topPlayer.Player);
 
     pairings.sort(
