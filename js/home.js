@@ -54,10 +54,22 @@ async function loadDashboard() {
         }
     });
 
+    players.forEach(player=>{
+        player.IMPACT_SCORE =
+            (player.PTS || 0 +
+            (player.REV || 0 +
+            (player.AST || 0 +
+            (player.STL || 0 +
+            (player.BLK || 0 +
+            (player.TO || 0 );
+    });
+
     players.sort(
-        (a, b) =>
-            b.PLUS_MINUS - a.PLUS_MINUS
-    );
+        (a,b)=>
+            b.IMPACT_SCORE - a.IMPACT_SCORE
+        );
+
+    const topPlayer = players[0];
 
     const scoringLeader =
         [...players].sort(
@@ -156,7 +168,7 @@ async function loadDashboard() {
             <div class="dashboard-card top-player-card" onclick="window.location.href='player.html?player=${encodeURIComponent(topPlayer.Player)}'">
                 <h3>Top Impact Player</h3>
                 <br>
-                ${topPlayer.PLUS_MINUS > 0 ? "+" : ""}${topPlayer.PLUS_MINUS}
+                Impact Score: ${topPlayer.IMPACT_SCORE.toFixed(0)}
                 <div class="top-player-content">
                     <img
                         class="dashboard-player-photo"
