@@ -1,5 +1,5 @@
 async function loadDashboard() {
-
+    console.log("HOME.JS VERSION 2");
     const cleanName = name =>
         name.replace(/^.*?#?\d+\s*/, "");
 
