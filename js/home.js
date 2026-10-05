@@ -56,12 +56,12 @@ async function loadDashboard() {
 
     players.forEach(player=>{
         player.IMPACT_SCORE =
-            (player.PTS || 0) +
-            (player.REB || 0) +
-            (player.AST || 0) +
-            ((player.STL || 0)*2) +
-            ((player.BLK || 0)*2) +
-            (player.TO || 0 );
+            (player.PTS_Total || 0) +
+            (player.REB_Total || 0) +
+            (player.AST_Total || 0) +
+            ((player.STL_Total || 0)*2) +
+            ((player.BLK_Total || 0)*2) -
+            (player.TO_Total || 0 );
     });
 
     players.sort(
