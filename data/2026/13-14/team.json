@@ -22,5 +22,29 @@
         "OppTO":36,
         "OppFOUL":9,
         "OppREB":55
+    },
+    {
+        "GameFolder":"09-26-26 Relentless 2012",
+        "Date":"09-26-2026",
+        "Opponent":"Relentless 2012",
+        "Result":"L",
+        "TeamPTS":16.0,
+        "TeamREB":34.0,
+        "TeamAST":3.0,
+        "TeamSTL":10.0,
+        "TeamBLK":5.0,
+        "TeamTO":42.0,
+        "Team3PM":0.0,
+        "Team3PA":6.0,
+        "TeamFOUL":12.0,
+        "OppPTS":52.0,
+        "OppSTL":28,
+        "OppFGM":20,
+        "OppFGA":80,
+        "OppOREB":26,
+        "OppDREB":24,
+        "OppTO":22,
+        "OppFOUL":10,
+        "OppREB":50
     }
 ]
