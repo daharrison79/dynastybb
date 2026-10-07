@@ -46,5 +46,29 @@
         "OppTO":22,
         "OppFOUL":10,
         "OppREB":50
+    },
+    {
+        "GameFolder":"09-27-26 Attack South 2012",
+        "Date":"09-27-2026",
+        "Opponent":"Attack South 2012",
+        "Result":"L",
+        "TeamPTS":28.0,
+        "TeamREB":60.0,
+        "TeamAST":7.0,
+        "TeamSTL":14.0,
+        "TeamBLK":5.0,
+        "TeamTO":42.0,
+        "Team3PM":0.0,
+        "Team3PA":14.0,
+        "TeamFOUL":16.0,
+        "OppPTS":49.0,
+        "OppSTL":18,
+        "OppFGM":19,
+        "OppFGA":84,
+        "OppOREB":21,
+        "OppDREB":32,
+        "OppTO":30,
+        "OppFOUL":10,
+        "OppREB":53
     }
 ]
