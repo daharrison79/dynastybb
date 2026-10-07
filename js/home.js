@@ -54,22 +54,22 @@ async function loadDashboard() {
         }
     });
 
-    players.forEach(player=>{
-        player.IMPACT_SCORE =
-            (player.PTS_Total || 0) +
-            (player.REB_Total || 0) +
-            (player.AST_Total || 0) +
-            ((player.STL_Total || 0)*2) +
-            ((player.BLK_Total || 0)*2) -
-            (player.TO_Total || 0 );
-    });
+    const minPoss = 25 * gamesPlayed;
 
-    players.sort(
-        (a,b)=>
-            b.IMPACT_SCORE - a.IMPACT_SCORE
+    const eligiblePlayers=
+        players.filter(
+            player=>player.POSS>=minPoss
         );
 
-    const topPlayer = players[0];
+    const playerPool =
+        eligiblePlayers.length > 0
+            ? eligiblePlayers: players;
+
+    playerPool.sort(
+        (a, b) => b.NET_RTG - a.NET_RTG
+    );
+
+    const topPlayer = playerPool[0];
 
     const scoringLeader =
         [...players].sort(
@@ -165,9 +165,9 @@ async function loadDashboard() {
         <div class="dashboard-grid">
 
             <div class="dashboard-card top-player-card" onclick="window.location.href='player.html?player=${encodeURIComponent(topPlayer.Player)}'">
-                <h3>Top Impact Player</h3>
+                <h3>Top NetRtg</h3>
                 <br>
-                Impact Score: ${topPlayer.IMPACT_SCORE.toFixed(0)}
+                NetRTG: ${topPlayer.NET_RTG.toFixed(1)}
                 <div class="top-player-content">
                     <img
                         class="dashboard-player-photo"
