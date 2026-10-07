@@ -111,6 +111,7 @@ async function loadPlayer() {
                         <p><span>Blocks: </span><span>${player.BPG.toFixed(1)}</span></p>
                         <p><span>Turnovers: </span><span>${player.TOPG.toFixed(1)}</span></p>
                         <p><span>Fouls: </span><span>${player.FPG.toFixed(1)}</span></p>
+                        <p><span>EFF/G:</span><span>${player.EFF_PG.toFixed(1)}</span></p>
                     </div>
                     <div>
                         <h4>Shooting Stats</h4>
@@ -125,6 +126,8 @@ async function loadPlayer() {
                         <p><span>PTS: </span><span>${player.PTS_Total}</span></p>
                         <p><span>REB: </span><span>${player.REB_Total}</span></p>
                         <p><span>AST: </span><span>${player.AST_Total}</span></p>
+                        <p><span>NetRtg: </span><span>${player.NET_RTG.toFixed(1)}</span></p>
+                        <p><span>EFF:</span><span>${player.EFF}</span>
                     </div>
                 </div>
             </div>

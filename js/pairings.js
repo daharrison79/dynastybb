@@ -23,19 +23,29 @@ async function loadPairings() {
             .replaceAll(" ", "_");
 
 
-    pairings.sort((a, b) => {
-        return b.DIFF - a.DIFF;
-    });
+    pairings.sort((a, b) => b.NET_RTG - a.NET_RTG);
 
-    pairings.slice(0,15).forEach((pair, index) => {
-        const player1Display =
-            cleanName(pair.Player1);
-        const player2Display =
-            cleanName(pair.Player2);
-        const pair1Photo =
-            photoName(pair.Player1);
-        const pair2Photo =
-            photoName(pair.Player2);
+    const eligiblePairings =
+        pairings.filter(
+            pair => pair.POSS >= 50
+        );
+
+    eligiblePairings.sort(
+        (a, b) => b.NET_RTG - a.NET_RTG
+    );
+
+    eligiblePairings
+        .slice(0, 15)
+        .forEach((pair, index) => {
+            const player1Display =
+                cleanName(pair.Player1);
+            const player2Display =
+                cleanName(pair.Player2);
+            const pair1Photo =
+                photoName(pair.Player1);
+            const pair2Photo =
+                photoName(pair.Player2);
+
         html += `
             <div class="card pairing-card">
                 <div class="pairing-players">
@@ -61,7 +71,7 @@ async function loadPairings() {
                     </div>
                 </div>
                 <div class="plus-minus">
-                    ${pair.DIFF > 0 ? "+" : ""}${pair.DIFF}
+                    ${pair.NET_RTG.toFixed(1)}
                 </div>      
                     <div class="pairing-stat-grid">
                         <div class="pairing-stat">

@@ -105,19 +105,40 @@ async function loadDashboard() {
 
     console.log(topPlayer.Player);
 
-    pairings.sort(
+    const eligiblePairings =
+        pairings.filter(
+            p => p.POSS >= 50
+        );
+
+    const pairingPool =
+        eligiblePairings.length > 0
+            ? eligiblePairings
+            : pairings;
+
+    pairingPool.sort(
         (a, b) =>
-            b.DIFF - a.DIFF
+            b.NET_RTG - a.NET_RTG
     );
 
-    const topPairing = pairings[0];
+    const topPairing = pairingPool[0];
 
-    lineups.sort(
+    const eligibleLineups =
+        lineups.filter(
+            lineup => lineup.POSS >= 10
+        );
+
+    const lineupPool =
+        eligibleLineups.length > 0
+            ? eligibleLineups
+            : lineups;
+
+    lineupPool.sort(
         (a, b) =>
-            b.DIFF - a.DIFF
+            b.NET_RTG - a.NET_RTG
     );
 
-    const topLineup = lineups[0];
+    const topLineup = lineupPool[0];
+
     const lineupPlayers =
         topLineup.lineup
             .split(",");
@@ -183,7 +204,7 @@ async function loadDashboard() {
             <div class="dashboard-card pairing-card"onclick="window.location.href='pairings.html'">
                 <h3>Best Pairing</h3>
                 <br>
-                ${topPairing.DIFF > 0 ? "+" : ""}${topPairing.DIFF}
+                NET RTG: ${topPairing.NET_RTG.toFixed(1)}
                 <div class="pairing-players">
                     <div class="pairing-player">
                         <img
@@ -210,7 +231,7 @@ async function loadDashboard() {
             <div class="dashboard-card lineup-card" onclick="window.location.href='lineups.html'">
                 <h3>Best Lineup</h3>
                 <br>
-                ${topLineup.DIFF > 0 ? "+" : ""}${topLineup.DIFF}
+                NET RTG: ${topLineup.NET_RTG.toFixed(1)}
                 <div class="lineup-players">
                     ${lineupHtml}
                 </div>

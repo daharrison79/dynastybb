@@ -5,20 +5,20 @@ function buildNavigation() {
                 Season:
                 <select id="season-selector">
                     <option value="2026">2026</option>
-                    //<option value="2027">2027</option>
+                    // <option value="2027">2027</option>
                 </select>
             </label>
             <label>
                 Team:
                 <select id="team-selector">
                     <option value="13-14">13-14</option>
-                    //<option value="12">12</option>
+                    // <option value="12">12</option>
                 </select>
             </label>
         </div>
 
         <nav>
-            <a href="index.html">Home</a>
+            <a href="portal.html">Home</a>
             <a href="team.html">Team</a>
             <a href="players.html">Players</a>
             <a href="pairings.html">Pairings</a>

@@ -32,7 +32,7 @@ async function loadPlayers() {
                     alt="${player.Player}"
                     onerror="this.src='images/players/playerplaceholder.png'">
                 <p class="plus-minus">
-                    ${player.PLUS_MINUS > 0 ? "+" : ""}${player.PLUS_MINUS}
+                    ${player.NET_RTG.toFixed(1)}
                 </p>
 
                 <p>GP: ${player.Games}</p>

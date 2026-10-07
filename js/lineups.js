@@ -20,15 +20,18 @@ async function loadLineups() {
             .replaceAll(".", "")
             .replaceAll(" ", "_");
 
-    lineups.sort((a, b) => {
-        return b.DIFF - a.DIFF;
-    });
-    
+    const eligibleLineups =
+        lineups.filter(
+            lineup => lineup.POSS >= 10
+        );
+
+    eligibleLineups.sort(
+        (a, b) => b.NET_RTG - a.NET_RTG
+    );
+
     let html = "";
 
-    lineups
-    .slice(0, 10)
-    .forEach((lineup, index) => {
+    eligibleLineups.slice(0, 10).forEach((lineup, index) => {
         const lineupPlayers =
             lineup.lineup.split(",");
         
@@ -62,7 +65,7 @@ async function loadLineups() {
                     ${lineupPlayersHtml}
                 </div>
                 <div class="plus-minus">
-                    ${lineup.DIFF > 0 ? "+" : ""}${lineup.DIFF}
+                    ${lineup.NET_RTG.toFixed(1)}
                 </div>
             <div class="pairing-stat-grid">
                 <div class="pairing-stat">
