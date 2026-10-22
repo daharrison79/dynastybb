@@ -10,7 +10,7 @@
 }
 
 
-/*GLOBA:*/
+/*GLOBAL*/
 * {
     box-sizing: border-box;
 }
@@ -589,6 +589,95 @@ button:hover {
 }
 
 
+
+/* ==========================
+   GLOSSARY PAGE
+========================== */
+
+.glossary-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-top: 4px solid var(--dynasty-pink);
+    margin-bottom: 1rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.glossary-card h1 {
+    color: var(--dynasty-cyan);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-shadow:
+        0 0 8px rgba(0,212,255,.3);
+}
+
+.glossary-card > p {
+    margin-bottom: 30px;
+}
+
+.glossary-section {
+    margin-top: 25px;
+}
+
+.glossary-section h2 {
+    color: var(--dynasty-pink);
+    border-bottom: 2px solid var(--dynasty-cyan);
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    );
+    gap: 15px;
+}
+
+.glossary-term {
+    background: #111;
+    color: white;
+    border-left: 4px solid var(--dynasty-cyan);
+    border-radius: var(--card-radius);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.glossary-term h3 {
+    color: var(--dynasty-pink);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.glossary-term p {
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.formula-box {
+    background-color: rgba(0,212,255,0.05);
+    border: 2px solid var(--dynasty-cyan);
+    color: var(--dynasty-cyan);
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: var(--card-radius);
+    font-family: Consolas, monospace;
+    text-align: center;
+    font-weight: bold;
+}
+
+.glossary-note {
+    margin-top: 10px;
+    color: #cccccc;
+    font-style: italic;
+}
+
 /*MOBILE*/
 @media (max-width: 768px) {
     .site-logo {
@@ -653,4 +742,17 @@ button:hover {
         flex-direction: column;
         gap: 20px;
     }
+
+        .glossary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .glossary-card {
+        padding: 1rem;
+    }
+
+    .formula-box {
+        font-size: 0.8rem;
+    }
+
 }
