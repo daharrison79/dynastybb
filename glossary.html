@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Glossary</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <img
+            class="site-logo"
+            src="images/logo.png"
+            alt="Dynasty Logo">
+    </header>
+
+    <div id="navigation"></div>
+
+    <main>
+
+        <div class="glossary-card">
+
+            <h1>Basketball Statistics Glossary</h1>
+
+            <p>
+                This page explains the statistics and analytics used throughout
+                the Dynasty Basketball Analytics Portal.
+            </p>
+
+            <div class="glossary-section">
+
+                <h2>Traditional Statistics</h2>
+
+                <div class="glossary-grid">
+
+                    <div class="glossary-term">
+                        <h3>GP (Games Played)</h3>
+                        <p>The number of games a player has appeared in.</p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>PTS / PPG</h3>
+                        <p>Total Points and Points Per Game.</p>
+                        <div class="formula-box">
+                            PPG = Points ÷ Games
+                        </div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>REB / RPG</h3>
+                        <p>Total Rebounds and Rebounds Per Game.</p>
+                        <div class="formula-box">
+                            RPG = Rebounds ÷ Games
+                        </div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>AST / APG</h3>
+                        <p>Total Assists and Assists Per Game.</p>
+                        <div class="formula-box">
+                            APG = Assists ÷ Games
+                        </div>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>STL / SPG</h3>
+                        <p>Total Steals and Steals Per Game.</p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>BLK / BPG</h3>
+                        <p>Total Blocks and Blocks Per Game.</p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>TO / TOPG</h3>
+                        <p>Total Turnovers and Turnovers Per Game.</p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>FOUL / FPG</h3>
+                        <p>Total Fouls and Fouls Per Game.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glossary-section">
+
+                <h2>Shooting Statistics</h2>
+
+                <div class="glossary-grid">
+
+                    <div class="glossary-term">
+
+                        <h3>FG%</h3>
+
+                        <p>
+                            Field Goal Percentage.
+                        </p>
+
+                        <div class="formula-box">
+                            FG% = FGM ÷ FGA
+                        </div>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>3PT%</h3>
+
+                        <p>
+                            Three-Point Percentage.
+                        </p>
+
+                        <div class="formula-box">
+                            3PT% = 3PM ÷ 3PA
+                        </div>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>FT%</h3>
+
+                        <p>
+                            Free Throw Percentage.
+                        </p>
+
+                        <div class="formula-box">
+                            FT% = FTM ÷ FTA
+                        </div>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>eFG%</h3>
+
+                        <p>
+                            Effective Field Goal Percentage. Gives additional
+                            credit for made three-point shots.
+                        </p>
+
+                        <div class="formula-box">
+                            eFG% = (FGM + (0.5 × 3PM)) ÷ FGA
+                        </div>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>TS%</h3>
+
+                        <p>
+                            True Shooting Percentage. Measures overall scoring
+                            efficiency including free throws.
+                        </p>
+
+                        <div class="formula-box">
+                            TS% = PTS ÷ (2 × (FGA + (0.44 × FTA)))
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glossary-section">
+
+                <h2>Impact Metrics</h2>
+
+                <div class="glossary-grid">
+
+                    <div class="glossary-term">
+
+                        <h3>PF (Points For)</h3>
+
+                        <p>
+                            Team points scored while the player, pairing,
+                            or lineup was on the floor.
+                        </p>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>PA (Points Against)</h3>
+
+                        <p>
+                            Opponent points scored while the player,
+                            pairing, or lineup was on the floor.
+                        </p>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>POSS</h3>
+
+                        <p>
+                            Estimated possessions while the player,
+                            pairing, or lineup was on the floor.
+                        </p>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>+/- (Plus Minus)</h3>
+
+                        <p>
+                            Raw scoring differential while on the floor.
+                        </p>
+
+                        <div class="formula-box">
+                            PLUS_MINUS = PF − PA
+                        </div>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>NET RTG (Net Rating)</h3>
+
+                        <p>
+                            Measures how many points a team outscores
+                            or is outscored by opponents per 100
+                            possessions while a player is on the floor.
+                        </p>
+
+                        <div class="formula-box">
+                            ((PF − PA) ÷ POSS) × 100
+                        </div>
+
+                        <div class="glossary-note">
+                            Positive values indicate the team performs
+                            better than opponents while the player is
+                            on the court.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glossary-section">
+
+                <h2>Efficiency Metrics</h2>
+
+                <div class="glossary-grid">
+
+                    <div class="glossary-term">
+
+                        <h3>EFF (Efficiency Rating)</h3>
+
+                        <p>
+                            A box-score metric that rewards positive
+                            contributions and penalizes missed shots
+                            and turnovers.
+                        </p>
+
+                        <div class="formula-box">
+                            EFF = PTS + REB + AST + STL + BLK
+                            - (FGA - FGM)
+                            - (FTA - FTM)
+                            - TO
+                        </div>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>EFF/G</h3>
+
+                        <p>
+                            Average Efficiency Rating per game.
+                        </p>
+
+                        <div class="formula-box">
+                            EFF ÷ Games
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glossary-section">
+
+                <h2>Lineup Metrics</h2>
+
+                <div class="glossary-grid">
+
+                    <div class="glossary-term">
+
+                        <h3>Best Pairing</h3>
+
+                        <p>
+                            Two-player combinations ranked by
+                            Net Rating while sharing the floor.
+                        </p>
+
+                    </div>
+
+                    <div class="glossary-term">
+
+                        <h3>Best Lineup</h3>
+
+                        <p>
+                            Five-player lineups ranked by Net Rating
+                            while on the court together.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glossary-section">
+
+                <h2>Quick Interpretation Guide</h2>
+
+                <div class="glossary-grid">
+
+                    <div class="glossary-term">
+                        <h3>PPG</h3>
+                        <p>How much a player scores.</p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>RPG</h3>
+                        <p>How much a player rebounds.</p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>APG</h3>
+                        <p>How much a player creates offense.</p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>EFF/G</h3>
+                        <p>How productive a player is statistically.</p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>NET RTG</h3>
+                        <p>
+                            How well the team performs while the player
+                            is on the floor.
+                        </p>
+                    </div>
+
+                    <div class="glossary-term">
+                        <h3>TS%</h3>
+                        <p>
+                            How efficiently a player scores.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    <script src="js/navigation.js"></script>
+    <script src="js/config.js"></script>
+</body>
+</html>
