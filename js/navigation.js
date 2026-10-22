@@ -23,6 +23,7 @@ function buildNavigation() {
             <a href="players.html">Players</a>
             <a href="pairings.html">Pairings</a>
             <a href="lineups.html">Lineups</a>
+            <a href="glossary.html">Glossary</a>
         </nav>
     `;
 }
